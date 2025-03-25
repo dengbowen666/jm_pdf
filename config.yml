@@ -5,10 +5,10 @@ dir_rule:
   base_dir: D:/18comic_down/books
   rule: Bd_Atitle_Pindex
 
-client:
-  domain:
-    - 18comic.vip
-    - 18comic.org
+#client:
+#  domain:
+#    - 18comic.vip
+#    - 18comic.org
 
 download:
   cache: true # 如果要下载的文件在磁盘上已存在，不用再下一遍了吧？

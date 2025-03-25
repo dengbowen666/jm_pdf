@@ -1,6 +1,9 @@
-import jmcomic, os, time, yaml
+import jmcomic
+import os
+import time
+import yaml
+import argparse
 from PIL import Image
-
 def all2PDF(input_folder, pdfpath, pdfname):
     start_time = time.time()
     paht = input_folder
@@ -45,12 +48,12 @@ def all2PDF(input_folder, pdfpath, pdfname):
 
 if __name__ == "__main__":
     # 自定义设置：
-    config = "D:/18comic_down/code/config.yml"
+    config = "config.yml"
     loadConfig = jmcomic.JmOption.from_file(config)
-    #如果需要下载，则取消以下注释
-    # manhua = ['146417']
-    # for id in manhua:
-    #     jmcomic.download_album(id,loadConfig)
+
+    manhua = ['350234']
+    for id in manhua:
+        jmcomic.download_album(id,loadConfig)
 
     with open(config, "r", encoding="utf8") as f:
         data = yaml.load(f, Loader=yaml.FullLoader)
